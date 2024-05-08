@@ -45,3 +45,5 @@ export const BankProvider = ({ children }) => {
         </BankContext.Provider>
     );
 }
+
+export default BankContext;

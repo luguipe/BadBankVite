@@ -1,39 +1,38 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './main.scss'
-import * as bootstrap from 'bootstrap'
-import App from './App.jsx'
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
-import Card from './components/context.jsx'
-import { NavBar } from './components/navbar.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './main.scss';
+import './index.css';
+import * as bootstrap from 'bootstrap';
+import App from './App.jsx';
+import { BankProvider } from './components/BankContext.jsx';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 
-import Home from          './pages/home'
-import CreateAccount from './pages/createaccount'
-import Login from         './pages/login'
-import Deposit from       './pages/deposit'
-import Withdraw from      './pages/withdraw'
-import Balance from       './pages/balance'
-import AllData from       './pages/alldata'
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <BankProvider>
+      <App />
+    </BankProvider>
+  </React.StrictMode>
+);
 
-    <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/'               element={<App />}>
-          <Route index                element={<Home />}/>
-          <Route path='home'          element={<Home/>}/>
-          <Route path='createaccount' element={<CreateAccount/>}/>
-          <Route path='login'         element={<Login/>}/>
-          <Route path='deposit'       element={<Deposit/>}/>
-          <Route path='withdraw'      element={<Withdraw/>}/>
-          <Route path='balance'       element={<Balance/>}/>
-          <Route path='alldata'       element={<AllData/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>                                                                                   
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={ <App /> }>
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+  // <React.StrictMode>
+  //  <App />
+  // </React.StrictMode>                                                                                   
 
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />) 
+// ReactDOM.createRoot(document.getElementById('root')).render(<App />) 
 
 
