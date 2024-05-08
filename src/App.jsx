@@ -15,10 +15,11 @@ import Card from "./components/context.jsx";
 function App() {
 
   return (
-    <>
-      <BrowserRouter>
+    <>   
+      
+       <BrowserRouter>
             <Routes>
-              <Route path='*' element={<App />}>
+                <Route path='*' element={<App />}></Route>
                 <Route index element={<Home />} />
                 <Route path='home' element={<Home />} />
                 <Route path='createaccount' element={<CreateAccount />} />
@@ -27,7 +28,6 @@ function App() {
                 <Route path='withdraw' element={<Withdraw />} />
                 <Route path='balance' element={<Balance />} />
                 <Route path='alldata' element={<AllData />} />
-              </Route>
             </Routes>
         </BrowserRouter>
     </>

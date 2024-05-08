@@ -1,5 +1,3 @@
-import { Link, Outlet } from "react-router-dom";
-
 function CreateAccount(){
   const [show, setShow]         = React.useState(true);
   const [status, setStatus]     = React.useState('');
